@@ -2,7 +2,6 @@ export default function Video({ src }) {
   return (
     <video
       muted
-      autoPlay
       playsInline
       loop
       controls
