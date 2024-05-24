@@ -1,0 +1,41 @@
+# Documents
+
+import { Tabs, Steps, Callout, Cards, Card } from "nextra/components";
+
+import Image from "next/image";
+
+import { TerminalIcon, BrewIcon } from "@components/icons"
+
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <Image
+    src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/public/under_construct.png"
+    alt="under construct"
+    width={400}
+    height={400}
+  />
+</div>
+
+<Callout emoji="👾" type="info">Tested on macOS Sonoma 14.0</Callout>
+
+
+<Cards num={2}>
+  <Card icon={<BrewIcon />} title="Installing Homebrew" href="/docs/homebrew"></Card>
+  <Card icon={<TerminalIcon />} title="How to Open Terminal" href="/faq/how_to_open_terminal"></Card>
+</Cards>
+
+<Callout type="warning" emoji="⚠️">
+
+`THIS PAGE IS CURRENTLY UNDER CONSTRUCTION`
+
+If you encounter any issues, have suggestions, or would like to know more about my development progress,
+please feel free to [post on the discussion board](https://github.com/AppleBoiy/kiwis/discussions).
+You can also explore [my roadmap](https://github.com/AppleBoiy/AppleBoiy/blob/main/README.md#whats-on-my-to-do-list)
+to see what's on my to-do list.
+
+</Callout>

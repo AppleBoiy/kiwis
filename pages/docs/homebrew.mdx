@@ -1,0 +1,83 @@
+import { Callout, Steps, Card } from "nextra/components";
+import { TerminalIcon } from "@components/icons"
+
+# Homebrew Installation Guide
+
+<div></div>
+<div align="center">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Homebrew_logo.svg/1200px-Homebrew_logo.svg.png"
+    width="100"
+  />
+  <p>Homebrew is a free and open-source software package management system that simplifies the installation of software on Apple's macOS operating system.</p>
+</div>
+
+<Callout emoji="👾" type="info">Tested on macOS Sonoma 14.0</Callout>
+
+## Installation Steps
+
+<Steps>
+
+### 1. Open Terminal
+
+    For more information please see:
+
+    <Card icon={<TerminalIcon />} title="How to open terminal in macOS" href="/faq/how_to_open_terminal"></Card>
+
+### 2. Install Homebrew:
+
+    Once you have the Terminal open, you'll need to install Homebrew. This is a package manager for macOS that makes it easy to install software.
+    Copy and paste the following command into the Terminal and press <kbd>Enter</kbd>:
+
+```shell copy filename="sh"
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+During the installation process, you might be asked to provide your user password. Type your password and press <kbd>Enter</kbd> (note: you won't see the characters as you type).
+
+
+<img
+  src="https://raw.githubusercontent.com/CSCMU-65s/cs-wiki101/main/img/homebrew/homebrew_require_pwd.jpeg"
+  width="800"
+  alt="Homebrew require password"
+/>
+
+### 3. Verify Installation
+
+    Once the installation is complete, you can verify that Homebrew is correctly installed.
+    In the Terminal, type the following command and press <kbd>Enter</kbd>:
+
+```shell copy filename="sh"
+ brew --version
+```
+
+This will display the `Homebrew` version number if the installation was successful.
+
+```diff sh filename="console"
+$ brew --version
+> Homebrew 4.1.18
+```
+
+This command will display the Homebrew version number if the installation was successful.
+
+</Steps>
+
+## Conclusion
+
+Now that Homebrew is installed on your macOS, you can easily manage software installations using simple commands like:
+
+- To install a package: `brew install <package_name>{:sh}`
+- To install an application: `brew install --cask <application_name>{:sh}`
+
+For instance, to install the popular text editor VSCode, you'd run:
+
+```shell copy filename="sh"
+brew install --cask visual-studio-code
+```
+
+## Additional Resources
+
+| Source                                          | Description            |
+| ----------------------------------------------- | ---------------------- |
+| [Homebrew](https://brew.sh/)                    | Homebrew website       |
+| [Homebrew Documentation](https://docs.brew.sh/) | Homebrew documentation |

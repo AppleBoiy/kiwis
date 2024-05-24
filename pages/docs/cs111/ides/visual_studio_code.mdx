@@ -1,0 +1,100 @@
+import { Callout, Steps, Card, Tabs, Tab } from "nextra/components";
+
+import { PythonIcon, TerminalIcon } from "@components/icons";
+import { Video } from "@components/video";
+import { Screenshot } from "@components/screenshot";
+import { PointLeftIcon } from "@components/icons";
+import Image from "next/image";
+
+
+# Visual Studio Code (VS Code)
+
+
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+<Image
+    src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/vscode.png"
+    alt="under construct"
+    width={200}
+    height={200}
+  />
+</div>
+
+<Callout emoji="👾" type="info">
+  Tested on macOS Sonoma 14.0
+</Callout>
+
+<Callout type="warning" emoji="⚠️">
+  THIS PAGE IS CURRENTLY UNDER CONSTRUCTION
+</Callout>
+
+
+## Step 1: Install Python
+
+<Card
+    icon={<PythonIcon />}
+    title="If you don't have installed Python yet, you can follow these instructions. ⬅"
+    href="/docs/cs111/install_python"
+></Card>
+
+<Callout>
+    If you already have `Python` installed, you can skip these steps.
+</Callout>
+
+## Step 2. Download and Install Visual Studio Code
+
+Visual Studio Code is a lightweight yet powerful source code editor. Follow the steps below to download and install
+Visual Studio Code on macOS:
+
+<Steps>
+
+### Go to the Visual Studio Code website
+    at [https://code.visualstudio.com](https://code.visualstudio.com).
+
+### Click on the `Download for macOS`
+
+    <Video src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/docs/cs111/download_vscode.mov" />
+
+### Install Visual Studio Code
+
+    Open `Finder`, go to the `Downloads` folder, and drag `VSCode.app` to the `Applications` folder.
+
+    <Video src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/docs/cs111//drop_vscode.mov" />
+    
+
+</Steps>
+
+Once the installation is complete, you can launch Visual Studio Code from your `Applications` folder and start using it
+for your programming tasks.
+
+
+## Step 3. Add the `code` command to the PATH
+
+Adding the `code` command to the PATH allows you to open Visual Studio Code from the Terminal. Follow the steps below to
+add the `code` command to your PATH on macOS:
+
+
+1. Open Visual Studio Code.
+2. Open the Command Palette by pressing `Shift + Command + P`
+3. Type `shell command` and select the option "Shell Command: Install 'code' command in PATH".
+4. Enter your system password if prompted. This step is necessary for granting the required permissions.
+
+<Video src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/docs/cs111/install_vscode_in_path.MOV" />
+
+
+After completing these steps, you can now open Visual Studio Code from the Terminal by typing `code` and pressing Enter.
+This allows for easier access and quick code editing directly from the command line.
+
+## References
+
+| Source                                                                                                          | Description                                   |
+|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| [Visual Studio Code Documentation](https://code.visualstudio.com/docs)                                          | Official documentation for Visual Studio Code |
+| [Python Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | Python extension for Visual Studio Code       |
+| [Command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)                   | How to add Visual Studio Code to the PATH     |
+---

@@ -1,0 +1,22 @@
+{
+  "index": "Introduction",
+  "homebrew": "Homebrew",
+
+  "-- courses": {
+    "type": "separator",
+    "title": "Courses"
+  },
+
+  "cs111": {
+    "title": "204111 (Python)"
+  },
+  "cs203": {
+    "title": "204203 (Golang)"
+  },
+  "cs231": {
+    "title": "204231 (Assembly)"
+  },
+  "cs252": {
+    "title": "204252 (C++)"
+  }
+}

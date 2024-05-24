@@ -1,0 +1,230 @@
+import { Tabs, Steps, Callout, Cards, Card } from "nextra/components";
+import { BrewIcon } from "@components/icons";
+import { Video } from "@components/video";
+
+# Installing Python Instructions
+
+<Callout emoji="👾" type="info">
+  Tested on macOS Sonoma 14.0
+</Callout>
+
+<Tabs items={['Python installer', 'Homebrew', 'Anaconda and Miniconda']}>
+
+<Tabs.Tab>
+    ## via Python installer
+    <Callout type="info" emoji="ℹ️">
+    For `BEGINNER` I **RECOMMENDED** you to install Python with `Python installer`,
+    It's easiest way to install Python on your macOS (In case you use a specific version of Python)
+    In this class we use `python 3.10.11`
+    </Callout>
+
+    ## Why Use the Python Installer?
+
+    1. **User-friendly Interface**: The Python installer provides a graphical user interface (GUI) that guides you through the installation process step by step. This makes it particularly suitable for beginners or users who are not comfortable with command-line interfaces (CLI).
+
+    2. **Ease of Use**: With the Python installer, you can simply download the installer package from the Python website and run it like any other application installer. This eliminates the need to use complex command-line commands, making the installation process more accessible to a wider range of users.
+
+    ## Installation
+
+    <Steps>
+
+    ###  Visit the Python Stable Release Page
+    Go to the [Python 3.10.11 release website](https://www.python.org/downloads/release/python-31011/).
+
+    ### Download Python Installer
+
+    <Video src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/docs/cs111/download_python_installer.mov" />
+
+    ### Installation Process
+
+    Open the installer and follow the instructions. Continue through the prompts by clicking "Continue" and "Agree" until you reach the License page. Read the license agreement and click "Agree" to proceed.
+
+    <Video src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/docs/cs111/install_python_via_installer.mp4" />
+
+    ### Additional Step: Install Certficate and Update shell profile
+
+    After the installation is complete, a Python 3.10 folder will be created in your Applications folder. Run the "Install Certificate.command" and "Update Shell Profile.command" files by double-clicking on them. Once finished, you can close the terminal and Python 3.10 folder.
+
+    <Video src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/docs/cs111/install_python_cert.mov" />
+
+    After finish running `Install Certficate.command` and `Update Shell Profile.command` you can close terminal and `Python 3.10` Folder.
+
+
+
+    </Steps>
+
+</Tabs.Tab>
+<Tabs.Tab>
+    ## via Homebrew
+
+    In this instruction, we will install Python via `Homebrew`.
+    If you don't have `Homebrew` installed on your macOS, please follow this instruction:
+
+    <Card icon={<BrewIcon />} title="How to Install Homebrew on macOS" href="/docs/homebrew"></Card>
+
+    <Callout >
+    If you already have `Homebrew` installed on your macOS, you can skip this step.
+    </Callout >
+
+    <Steps>
+
+    ### Step 1. Update Homebrew
+
+    Before installing Python 3.10, ensure that Homebrew is up to date by running the following command in your terminal:
+
+    ```bash copy filename="sh"
+    brew update
+    ```
+
+    ### Step 2. Install Python 3.10
+
+    Once Homebrew is updated, you can install Python 3.10 by executing the following command:
+
+    ```bash copy filename="sh"
+    brew install python@3.10
+    ```
+
+    This command will download and install Python 3.8 along with its dependencies.
+
+    ### Step 3. Verify Installation
+
+    After the installation is complete, you can verify that Python 3.10 has been successfully installed by checking its version:
+
+    ```bash copy filename="console"
+    $ python3 --version
+    > Python 3.10.xx
+    ```
+
+    This output confirms that Python 3.10 has been installed successfully.
+
+    ### Optional: Set Python 3.10 as Default (if needed)
+
+    If you want to make Python 3.10 your default Python version, you can use the `pyenv` utility. First, install `pyenv` via Homebrew:
+
+    ```bash copy filename="sh"
+    brew install pyenv
+    ```
+
+    Then, set Python 3.10 as the global version:
+
+    ```bash copy filename="sh"
+    pyenv global 3.10
+    ```
+    </Steps>
+
+</Tabs.Tab>
+<Tabs.Tab>
+    ## via Anaconda (Miniconda)
+    
+    In this instruction, we will install Anaconda via `Homebrew`.
+    If you don't have `Homebrew` installed on your macOS, please follow this instruction:
+
+    <Card icon={<BrewIcon />} title="How to Install Homebrew on macOS" href="/docs/homebrew"></Card>
+
+    <Callout >
+    If you already have `Homebrew` installed on your macOS, you can skip this step.
+    </Callout >
+
+    <Tabs items={['Miniconda', 'Anaconda']}>
+    <Tabs.Tab>
+        <Callout type="info" emoji="ℹ️">
+        I **HIGHLY RECOMMENDED** you to install Python with miniconda becase it's lighter than Anaconda.
+            But you can install Python with Anaconda if you want to.
+        </Callout >
+
+        <Steps>
+        ### Step 1: Miniconda Installation
+
+        Commence by installing Miniconda through Homebrew:
+
+        ```bash copy filename="sh"
+        brew install --cask miniconda
+        ```
+
+        ### Step 2: Configuring Miniconda
+
+        Following installation, configure Miniconda for your shell environment by executing the subsequent command:
+
+        ```bash
+        conda init "$(basename "${SHELL}")"
+        ```
+
+        Alternatively, you can manually append the following line to your shell initialization file (e.g., `~/.zshrc`, `~/.bashrc`):
+
+        ```bash copy showLineNumbers filename="~/.zshrc"
+        # Integrate Miniconda initialization into shell configuration
+        eval "$(conda "shell.$(basename "${SHELL}")" hook)"
+        ```
+        or
+        ```bash copy filename="sh"
+        echo 'eval "$(conda "shell.$(basename "${SHELL}")" hook)"' >> ~/.zshrc
+        ```
+        </Steps>
+
+    </Tabs.Tab>
+
+    <Tabs.Tab>
+
+        <Steps>
+        ### Step 1: Install Anaconda
+
+        - Use Homebrew to install Anaconda by running the following command:
+
+          ```bash copy filename="sh"
+          brew install --cask anaconda
+          ```
+
+        ### Step 2: Initialize Anaconda
+
+        - After Anaconda is installed, open a new terminal window.
+
+        - Run the following command to initialize Anaconda:
+
+          ```bash copy filename="sh"
+          conda init
+          ```
+
+        - Close the terminal window and open a new one to activate the changes.
+
+        ### Step 3: Create a new environment (optional but recommended)
+
+        - It's recommended to create separate environments for different projects to manage dependencies.
+
+        - To create a new environment with Python 3.10, execute the following command:
+
+          ```bash copy filename="sh"
+          conda create --name myenv python=3.10
+          ```
+          Replace `myenv` with your preferred environment name.
+
+        ### Step 4: Activate the environment
+
+        - Activate the environment by running:
+
+          ```bash copy filename="sh"
+            conda activate myenv
+            ```
+            Replace `myenv` with the name of your environment.
+
+        ### Step 5: Verify Python installation
+
+        - To verify that Python 3.10 is installed, run:
+
+            ```bash copy filename="sh"
+            python --version
+            ```
+
+        - You should see output similar to:
+
+            ```bash filename="console"
+            $ python --version
+            > Python 3.10.14
+            ```
+
+        </Steps>
+        </Tabs.Tab>
+    </Tabs>
+
+</Tabs.Tab>
+
+</Tabs>

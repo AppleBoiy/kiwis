@@ -1,0 +1,35 @@
+{
+  "name": "kiwis",
+  "version": "0.0.1",
+  "description": "WikiHow for CS student at Chiang Mai University,",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AppleBoiy/kiwis.git"
+  },
+  "author": "Chaipat J. (AppleBoiy)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AppleBoiy/kiwis/issues"
+  },
+  "homepage": "https://github.com/AppleBoiy/kiwis#readme",
+  "dependencies": {
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
+    "next": "^13.0.6",
+    "nextra": "latest",
+    "nextra-theme-docs": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.33.3"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "18.11.10",
+    "typescript": "^4.9.3"
+  }
+}

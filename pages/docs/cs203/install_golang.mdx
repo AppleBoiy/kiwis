@@ -1,0 +1,122 @@
+import { Tabs, Steps, Callout, Cards, Card } from "nextra/components";
+import { TerminalIcon, BrewIcon } from "@components/icons"
+import { FAQBox } from "@components/utils"
+
+# Go Installation Guide
+
+<div align="center">
+    <a href="https://golang.org/">
+        <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_go_gopher_icon_130571.png" width="200" />
+    </a>
+    <p>Go is an open-source programming language developed by Google that makes it easy to build simple, reliable, and efficient software.</p>
+</div>
+
+<Callout emoji="👾" type="info">
+  Tested on macOS Sonoma 14.0
+</Callout>
+<Callout type="warning" emoji="⚠️">
+    THIS PAGE IS CURRENTLY UNDER CONSTRUCTION
+</Callout>
+
+## Install Go
+
+Go is an open-source programming language developed by Google. Follow the steps below to install Go on macOS:
+
+<Steps>
+
+### Step 1: Install Homebrew
+    If you don't have Homebrew installed, follow the instructions provided on the [Homebrew website](https://brew.sh).
+    
+    <Card icon={<BrewIcon />} title="How to Install Homebrew on macOS" href="/docs/homebrew"></Card>
+    <Callout >
+    If you already have `Homebrew` installed on your macOS, you can skip this step.
+    </Callout >
+
+### Step 2: Install Go with Homebrew
+    Once Homebrew is installed, run the following command to install the latest version of Go:
+    
+    ```shell filename="sh" copy
+    brew install go
+    ```
+    
+    <FAQBox title="Do you want to install a specific version of Go?">
+    To install a specific version of Go using Homebrew, you can use the following steps:
+    
+    1. **Check Available Versions**:
+        ```shell copy filename="sh"
+        brew search go
+        ```
+        This command lists all the available versions of Go that can be installed via Homebrew.
+    
+    2. **Install a Specific Version**:
+        Once you've identified the version you want to install, use the following command:
+        ```shell
+        brew install go@<version>
+        ```
+        Replace `<version>` with the specific version number (e.g., `1.16`, `1.17`, etc.).
+    
+    3. **Link the Installed Version**:
+        By default, Homebrew will not link this version to the system `PATH` to avoid conflicts. To use the installed version, you need to link it manually:
+        ```shell copy filename="sh"
+        brew link --force --overwrite go@<version>
+        ```
+        This command ensures that the specified version of Go is set as the default version in your terminal.
+    
+    4. **Set Up Environment Variables**:
+        You might need to update your environment variables to ensure your shell recognizes the new version. Add the following lines to your shell configuration file (`.bashrc`, `.zshrc`, etc.):
+        ```shell copy filename="~/.zshrc"
+        export PATH="/usr/local/opt/go@<version>/bin:$PATH"
+        ```
+        Again, replace `<version>` with the specific version number you installed.
+    
+    5. **Verify Installation**:
+        To confirm that the installation was successful and that the correct version of Go is being used, run:
+        ```shell copy filename="sh"
+        go version
+        ```
+        This command should display the version of Go you just installed.
+    
+    6. **Switching Between Versions**:
+        If you need to switch between different installed versions of Go, you can unlink the current version and link a different one:
+        ```shell filename="sh"
+        brew unlink go@<current-version>
+        brew link --force --overwrite go@<new-version>
+        ```
+        Replace `<current-version>` and `<new-version>` with the appropriate version numbers.
+    
+    By following these steps, you can easily manage and switch between different versions of Go on your system.
+    </FAQBox>
+    
+    
+### Step 3: Verify the Installation
+    After the installation is complete, verify that Go is installed correctly by running:
+    
+    ```shell copy filename="sh"
+    go version
+    ```
+    You should see the Go version information.
+
+    ```sh filename="console"
+    $ go version
+    > go version go1.21.3 darwin/arm64
+    ```
+</Steps>
+    
+## Additional Step: Setting up Go Environment
+
+you can set `GOPATH` and `GOROOT` by adding the following lines to your `~/.bash_profile` or `~/.zshrc`
+
+```shell copy filename="~/.zshrc"
+export GOPATH="$HOME/.go" # or any other directory you want
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+```
+
+## References
+
+| Source | Description |
+| --- | --- |
+| [Go](https://golang.org/) | Go website |
+| [Go Documentation](https://golang.org/doc/) | Go documentation |
+| [Go Tutorial](https://golang.org/doc/tutorial/getting-started) | Go tutorial |
+| [Setup your workspace](https://sourabhbajaj.com/mac-setup/Go/) | The GOPATH and PATH environment variables |

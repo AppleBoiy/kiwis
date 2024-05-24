@@ -1,0 +1,124 @@
+import { Callout, Steps, Card, Tabs, Tab } from "nextra/components";
+
+import { PythonIcon, TerminalIcon } from "@components/icons";
+import { Video } from "@components/video";
+import { Screenshot } from "@components/screenshot";
+import { PointLeftIcon } from "@components/icons";
+
+# Sublime Text
+
+import Image from "next/image";
+
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <Image
+    src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/subl.png"
+    alt="under construct"
+    width={200}
+    height={200}
+  />
+</div>
+
+<Callout emoji="👾" type="info">
+  Tested on macOS Sonoma 14.0
+</Callout>
+
+These instructions are specifically tailored for students in CS111, DS223 and other courses that use Python. The steps in this guide will help you install Python and Sublime Text on macOS.
+
+## Step 1: Install Python
+
+<Card
+  icon={<PythonIcon />}
+  title="If you don't have installed Python yet, you can follow these instructions. ⬅"
+  href="/docs/cs111/install_python"
+></Card>
+
+<Callout>
+  If you already have `Python` installed, you can skip these steps.
+</Callout>
+
+## Step 2. Install Sublime Text
+
+Follow these steps to install Sublime Text on your macOS system:
+
+<Steps>
+
+### Download Sublime Text
+
+Visit the [Sublime Text website](https://www.sublimetext.com) and click on the `DOWNLOAD FOR MAC` button.
+
+    ![Sublime Text Website](https://raw.githubusercontent.com/CSCMU-65s/cs-wiki101/main/img/CS111/sublime-website.jpeg)
+
+### Move to Applications Folder
+
+Find the `Sublime Text.app` file in the `Downloads` folder and drag it to the `Applications` folder.
+
+<Video src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/assets/docs/cs111/drop_subl.mov" />
+
+</Steps>
+
+Once the installation is complete, you can launch Sublime Text from your `Applications` folder , `Launchpad` or by typing `subl` in the terminal and start using it for your programming tasks.
+
+## Step 3. Add the `subl` command to the PATH
+
+To use subl, the Sublime Text bin folder needs to be added to the path. For a typical installation of Sublime Text, this will be located at `/Applications/Sublime Text.app/Contents/SharedSupport/bin.{:txt}`
+
+### Verifying the Current Shell
+
+You can check you currnet shell by run this:
+
+```sh copy filename="sh"
+echo $SHELL
+```
+
+you console will look like this:
+
+```sh filename="console"
+$ echo $SHELL
+> /bin/zsh
+```
+
+If the output is `/bin/zsh{:zsh}`, you are using the Z shell (zsh). Otherwise, you are using a different shell.
+
+<Tabs items={['ZSH', 'BASH']}>
+  <Tab>
+    If using Zsh, the default starting with macOS 10.15, the following command will add the bin folder to the PATH environment variable:
+
+      ```shell copy filename="zsh"
+      echo 'export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"' >> ~/.zprofile
+      ```
+
+    To apply the changes immediately, run:
+
+      ```shell copy filename="zsh"
+      source ~/.zshrc
+      ```
+
+  </Tab>
+  <Tab>
+    If using Bash, the default before macOS 10.15, the following command will add the bin folder to the PATH environment variable:
+
+    ```shell copy filename="bash"
+    echo 'export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"' >> ~/.bash_profile
+    ```
+
+    To apply the changes immediately, run:
+
+      ```shell copy filename="bash"
+      source ~/.bashrc
+      ```
+
+  </Tab>
+</Tabs>
+
+## References
+
+| Source                                                             | Description                             |
+| ------------------------------------------------------------------ | --------------------------------------- |
+| [Sublime Text Documentation](https://www.sublimetext.com/docs/3/)  | Official documentation for Sublime Text |
+| [Command line](https://www.sublimetext.com/docs/command_line.html) | How to add Sublime Text to the PATH     |

@@ -1,0 +1,35 @@
+{
+  "index": {
+    "type": "page",
+    "title": "KIWIS",
+    "display": "hidden"
+  },
+  "docs": {
+    "type": "page",
+    "title": "Documentation"
+  },
+  "appendix": {
+    "type": "menu",
+    "title": "Appendix",
+    "items": {
+      "git_and_github": {
+        "title": "Git and Github",
+        "type": "page"
+      },
+      "fzf": {
+        "title": "Fuzzy Finder",
+        "type": "page"
+      }
+    }
+  },
+  "faq": {
+    "type": "menu",
+    "title": "FAQ",
+    "items": {
+      "how_to_open_terminal": {
+        "title": "How to Open Terminal?",
+        "type": "page"
+      }
+    }
+  }
+}

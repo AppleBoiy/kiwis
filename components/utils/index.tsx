@@ -1,0 +1,1 @@
+export { FAQBox } from "./faqbox"
