@@ -19,6 +19,10 @@
       "fzf": {
         "title": "Fuzzy Finder",
         "type": "page"
+      },
+      "make_cmake_and_build": {
+        "title": "Make, CMake and Build Systems",
+        "type": "page"
       }
     }
   },

@@ -1,0 +1,67 @@
+import { Callout, Steps, Tab, Tabs} from "nextra/components";
+import { Video } from "@components/video";
+import { Bleed } from "nextra-theme-docs";
+
+
+# Makefiles, CMake, and Build Systems
+
+### Makefiles
+Makefiles are used by the `make` build automation tool to define a set of tasks to be executed. They are widely used in Unix-based systems for compiling and building software projects.
+
+- **Creating a Makefile**: You can create a simple Makefile to compile a C++ project as follows:
+
+```makefile copy filename="Makefile"
+all: main
+
+main: main.o
+g++ -o main main.o
+
+main.o: main.cpp
+g++ -c main.cpp
+
+clean:
+rm -f main.o main
+```
+
+- **Using the Makefile**: Run the following command to compile your project:
+
+```bash copy filename="sh"
+make
+```
+
+### CMake
+CMake is a cross-platform build system generator. It uses simple configuration files called `CMakeLists.txt` to generate build files for a variety of platforms and build systems.
+
+- **Creating a CMakeLists.txt**: Here’s a basic `CMakeLists.txt` for a C++ project:
+
+```cmake copy filename="CMakeLists.txt"
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name
+project(MyProject)
+
+# Add an executable
+add_executable(MyProject main.cpp)
+```
+
+- **Building with CMake**: To build your project with CMake, run the following commands:
+
+```bash copy filename="sh"
+mkdir build
+cd build
+cmake ..
+make
+```
+
+### Build Systems
+Build systems automate the process of converting source code into executable programs. They manage dependencies, compile code, and link binaries.
+
+- **Common Build Systems**:
+- **Make**: A classic build automation tool that uses Makefiles.
+- **CMake**: A more modern tool that generates build files for various systems.
+- **Ninja**: A small build system with a focus on speed, often used with CMake to generate Ninja build files.
+
+
+<Callout emoji="📘" type="info">
+    Always refer to the official documentation and resources to stay updated with the latest features and best practices.
+</Callout>

@@ -10,67 +10,68 @@ import { Bleed } from "nextra-theme-docs";
 </Callout>
 
 <Callout type="info" emoji="ℹ️">
-    Not just like <a href="/docs/cs111">Python</a>, C++ is a compiled language. You need to compile your code before running it.
+    Not just like <a href="/docs/cs111">Python</a>, C++ files need to be compiled before they can be run. The compilation process translates the human-readable C++ code into machine-readable instructions that the computer can execute. The compiled code is then executed to produce the desired output.
 </Callout>
 
 ## C++ Compiler
 
 There are many C++ compilers available for macOS. They have some differences; on the other hand, they also have some similarities.
 
-### GCC and Clang
 
-<Tabs items={['GCC', 'Clang', 'GCC vs Clang']}>
+GCC (GNU Compiler Collection), G++ (the C++ compiler part of GCC), and Clang are three popular compilers used for compiling C and C++ programs. Here's a brief overview of each:
+
+<Tabs items={['GCC', 'G++', 'Clang']}>
     <Tab>
-        <Steps>
-            ### Install GCC
-            To install GCC on macOS, you can use Homebrew. First, update Homebrew by running the following command in your terminal:
+        <div align="center">
+            <a href="https://www.gnu.org/software/gcc/">
+                <img src="https://www.vectorlogo.zone/logos/gnu/gnu-ar21.svg" alt="Python Logo" width="400" />
 
-            ```bash copy filename="sh"
-            brew update
-            ```
-
-            Then, install GCC by executing the following command:
-
-            ```bash copy filename="sh"
-            brew install gcc
-            ```
-
-            ### Verify Installation
-            After the installation is complete, you can verify that GCC has been successfully installed by checking its version:
-
-            ```bash copy filename="console"
-            $ gcc --version
-            > gcc version 11.2.0 (Homebrew GCC 11.2.0_3)
-            ```
-        </Steps>
+            </a>
+            <p>GCC (GNU Compiler Collection)</p>
+            <p>Free Software Foundation (FSF)</p>
+        </div>
+    - **Description**: GCC is a free and open-source compiler that supports multiple programming languages.
+    - **Languages Supported**: C, C++, Objective-C, Fortran, Ada, Go, and D.
+    - **Features**:
+        - Widely used in the open-source community.
+        - Highly portable across various platforms and operating systems.
+        - Supports numerous optimizations and extensions.
+        - Extensive error and warning messages.
     </Tab>
 
     <Tab>
-        <Steps>
-            ### Install Clang
-            Clang is already included in Xcode Command Line Tools. You can install it by running the following command in your terminal:
+        <div align="center">
+            <a href="https://www.gnu.org/software/gcc/">
+                <img src="https://www.vectorlogo.zone/logos/gnu/gnu-ar21.svg" alt="Python Logo" width="400" />
 
-            ```bash copy filename="sh"
-            xcode-select --install
-            ```
-
-            ### Verify Installation
-            After the installation is complete, you can verify that Clang has been successfully installed by checking its version:
-
-            ```bash copy filename="console"
-            $ clang --version
-            > Apple clang version 13.0.0 (clang-1300.0.29.3)
-            ```
-        </Steps>
+            </a>
+            <p>G++ (GNU C++ Compiler)</p>
+            <p>Free Software Foundation (FSF)</p>
+        </div>
+    - **Description**: G++ is the C++ compiler part of the **GCC** suite, tailored for **C++**.
+    - **Features**:
+        - Can compile C++ programs and link them with C libraries.
+        - Integrates with GCC for pre-processing, compiling, assembling, and linking.
+        - Supports all the features and optimizations of GCC but tailored for C++.
     </Tab>
 
     <Tab>
-        ## GCC vs Clang
-        Both GCC and Clang are popular C++ compilers that are widely used by developers. Here are some key differences between the two:
+        <div align="center">
+            <a href="https://clang.llvm.org/">
+                <img src="https://www.llvm.org/img/LLVMWyvernSmall.png" alt="Python Logo" width="400" />
 
-        - **GCC** is the GNU Compiler Collection, which is a free and open-source compiler that supports multiple programming languages, including C, C++, and Fortran. It is known for its high performance and optimization capabilities.
+            </a>
+            <p>Clang</p>
+            <p>LLVM (originally by Apple, now part of the LLVM project)</p>
+        </div>
 
-        - **Clang** is a C, C++, and Objective-C compiler that is part of the LLVM project. It is known for its fast compilation speed and excellent error messages. Clang is the default compiler on macOS and Xcode.
-
+    - **Description**: Clang is a C, C++, and Objective-C compiler that is part of the LLVM project.
+    - **Languages Supported**: C, C++, Objective-C, and Objective-C++.
+    - **Features**:
+        - Provides fast compilation and low memory usage.
+        - Generates clear and concise error and warning messages.
+        - Modular architecture, making it easier to integrate into various development tools.
+        - Can serve as a drop-in replacement for GCC in many cases.
+        - Strong focus on diagnostics, providing more detailed and helpful compiler errors.
     </Tab>
 </Tabs>
