@@ -1,0 +1,101 @@
+import { Callout, Steps, Tab, Tabs} from "nextra/components";
+import { Video } from "@components/video";
+import { Bleed } from "nextra-theme-docs";
+
+
+# Running C++ Programs
+
+## A Hello World Program
+
+Here is a simple C++ program that prints "Hello, World!" to the console:
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+To compile and run this program, follow the steps below.
+
+<Steps>
+### Save the Program
+Save the program to a file named `hello.cpp`.
+
+### Compile the Program
+To compile the program, you can use the following command:
+
+```bash copy filename="sh"
+g++ hello.cpp -o hello
+```
+
+This command will compile the `hello.cpp` file and generate an executable file named `hello`.
+
+### Run the Executable
+After compiling the program, you can run the executable by executing the following command:
+
+```bash copy filename="sh"
+./hello
+```
+
+This will print `Hello, World!` to the console.
+</Steps>
+
+
+## Compile multiple files
+
+If you have multiple C++ files that you want to compile, you can use the following command:
+
+<Tabs items={['GCC', 'Clang']}>
+    <Tab>
+        <Steps>
+            ### Compile with GCC
+            To compile multiple C++ files with GCC, you can use the following command:
+
+            ```bash copy filename="sh"
+            g++ file1.cpp file2.cpp -o output
+            ```
+
+            This command will compile `file1.cpp` and `file2.cpp` and generate an executable file named `output`.
+
+            ### Run the Executable
+            After compiling the files, you can run the executable by executing the following command:
+
+            ```bash copy filename="sh"
+            ./output
+            ```
+        </Steps>
+    </Tab>
+
+    <Tab>
+        <Steps>
+            ### Compile with Clang
+            To compile multiple C++ files with Clang, you can use the following command:
+
+            ```bash copy filename="sh"
+            clang++ file1.cpp file2.cpp -o output
+            ```
+
+            or
+
+            ```bash copy filename="sh"
+            clang++ -std=c++11 file1.cpp file2.cpp -o output
+            ```
+
+            This command will compile `file1.cpp` and `file2.cpp` and generate an executable file named `output`.
+
+            ### Run the Executable
+            After compiling the files, you can run the executable by executing the following command:
+
+            ```bash copy filename="sh"
+            ./output
+            ```
+
+            ### clang vs clang++
+
+            - `clang{:sh}` is the C compiler, while `clang++{:sh}` is the C++ compiler.
+        </Steps>
+    </Tab>
+</Tabs>

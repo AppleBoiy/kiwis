@@ -1,0 +1,76 @@
+import { Callout, Steps, Tab, Tabs} from "nextra/components";
+import { Video } from "@components/video";
+import { Bleed } from "nextra-theme-docs";
+
+# Getting Started with C++
+
+<Callout emoji="👾" type="info">
+    {" "}
+    Tested on macOS Sonoma 14.0{" "}
+</Callout>
+
+<Callout type="info" emoji="ℹ️">
+    Not just like <a href="/docs/cs111">Python</a>, C++ is a compiled language. You need to compile your code before running it.
+</Callout>
+
+## C++ Compiler
+
+There are many C++ compilers available for macOS. They have some differences; on the other hand, they also have some similarities.
+
+### GCC and Clang
+
+<Tabs items={['GCC', 'Clang', 'GCC vs Clang']}>
+    <Tab>
+        <Steps>
+            ### Install GCC
+            To install GCC on macOS, you can use Homebrew. First, update Homebrew by running the following command in your terminal:
+
+            ```bash copy filename="sh"
+            brew update
+            ```
+
+            Then, install GCC by executing the following command:
+
+            ```bash copy filename="sh"
+            brew install gcc
+            ```
+
+            ### Verify Installation
+            After the installation is complete, you can verify that GCC has been successfully installed by checking its version:
+
+            ```bash copy filename="console"
+            $ gcc --version
+            > gcc version 11.2.0 (Homebrew GCC 11.2.0_3)
+            ```
+        </Steps>
+    </Tab>
+
+    <Tab>
+        <Steps>
+            ### Install Clang
+            Clang is already included in Xcode Command Line Tools. You can install it by running the following command in your terminal:
+
+            ```bash copy filename="sh"
+            xcode-select --install
+            ```
+
+            ### Verify Installation
+            After the installation is complete, you can verify that Clang has been successfully installed by checking its version:
+
+            ```bash copy filename="console"
+            $ clang --version
+            > Apple clang version 13.0.0 (clang-1300.0.29.3)
+            ```
+        </Steps>
+    </Tab>
+
+    <Tab>
+        ## GCC vs Clang
+        Both GCC and Clang are popular C++ compilers that are widely used by developers. Here are some key differences between the two:
+
+        - **GCC** is the GNU Compiler Collection, which is a free and open-source compiler that supports multiple programming languages, including C, C++, and Fortran. It is known for its high performance and optimization capabilities.
+
+        - **Clang** is a C, C++, and Objective-C compiler that is part of the LLVM project. It is known for its fast compilation speed and excellent error messages. Clang is the default compiler on macOS and Xcode.
+
+    </Tab>
+</Tabs>
