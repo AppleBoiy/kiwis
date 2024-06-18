@@ -1,0 +1,28 @@
+import { Tabs, Steps, Callout, Cards, Card } from "nextra/components";
+import { Video } from "@components/video";
+import { Bleed } from "nextra-theme-docs";
+import {DownloadIcon} from "@components/icons";
+import {FAQBox} from "@components/utils";
+
+# Getting Started with x86 Assembly
+
+<Callout emoji="👾" type="info">
+    Tested on macOS Sonoma 14.0
+</Callout>
+
+## Prerequisites
+
+For this guide, you will need to have the following tools installed on your system:
+
+- **MASM**: Microsoft Macro Assembler (MASM) is an x86 assembler.
+- **DOSBox**: DOSBox is an x86 emulator that allows you to run old DOS applications on modern operating systems.
+
+<Callout type="info" emoji="ℹ️">
+    If you don't have these tools installed, you can click on the links below to download and install them:
+</Callout>
+&nbsp;
+
+<Cards>
+<Card icon={<DownloadIcon />} title="Download MASM" href="https://www.microsoft.com/en-us/download/details.aspx?id=12654"></Card>
+<Card icon={<DownloadIcon />} title="Download DOSBox" href="https://www.dosbox.com/download.php?main=1"></Card>
+</Cards>

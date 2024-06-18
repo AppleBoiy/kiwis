@@ -5,3 +5,5 @@ export { default as PythonIcon } from "./python.svg";
 export { default as PointLeftIcon } from "./pointing_left_black.svg";
 export { default as VSCodeIcon } from "./vscode.svg";
 export { default as SampleIcon } from "./sample.svg";
+
+export { default as DownloadIcon } from "./download.svg";

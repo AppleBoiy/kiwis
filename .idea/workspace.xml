@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18484c7b-a17f-440a-8253-04fc67c83116" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/appendix/make_cmake_and_build.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/docs/cs252/install.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/docs/cs231/_meta.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/docs/cs231/get_started.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/appendix/_meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/appendix/_meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/icons/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/utils/faqbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/utils/faqbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/docs/cs111.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/docs/cs111.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/docs/cs231.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/docs/cs231.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/docs/cs252.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/docs/cs252.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/docs/cs252/_meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/docs/cs252/_meta.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/docs/cs252/get_started.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/docs/cs252/get_started.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/docs/cs252/run_program.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/docs/cs252/run_program.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,8 @@
       <updated>1718546880255</updated>
       <workItem from="1718546881557" duration="258000" />
       <workItem from="1718547147665" duration="3882000" />
-      <workItem from="1718603430033" duration="3128000" />
+      <workItem from="1718603430033" duration="4037000" />
+      <workItem from="1718686681355" duration="4406000" />
     </task>
     <servers />
   </component>
