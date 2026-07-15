@@ -37,7 +37,6 @@ const navbar = (
         </span>
       </span>
     }
-    projectLink="https://github.com/AppleBoiy/kiwis"
   />
 );
 

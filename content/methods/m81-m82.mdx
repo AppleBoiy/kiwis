@@ -1,4 +1,4 @@
-import { Callout, Steps } from "nextra/components";
+import { Steps } from "nextra/components";
 import { ResearchFigure } from "@components/research-figure";
 
 # M81 / M82 resolved-stellar-population workflow
@@ -12,9 +12,10 @@ This ledger documents how resolved-star catalogs become interpretable evidence f
   <div><dt>Status</dt><dd>ACTIVE / 2026</dd></div>
 </dl>
 
-<Callout type="info" emoji="↗">
-  The complete figure record is available in the [M81/M82 Figure Archive](https://archive.chaipat.cc).
-</Callout>
+<aside className="kiwis-ledger-note">
+  <span>ARCHIVE RECORD</span>
+  <p>The complete figure record is available in the <a href="https://archive.chaipat.cc">M81/M82 Figure Archive</a>.</p>
+</aside>
 
 <Steps>
 
@@ -54,32 +55,17 @@ Detect repeated measurements where neighboring fields overlap. Resolve duplicate
 
 Aggregate the cleaned catalog onto a `200 × 200` spatial grid. Maintain consistent coordinate transforms and field footprints so density variations remain physically interpretable.
 
-<div className="kiwis-figure-pair">
-  <ResearchFigure
-    src="/research/m81-191.webp"
-    alt="Full M81 group resolved-star density map with HST field coverage"
-    label="PLATE 03A · M81"
-    title="Group-scale stellar-density map"
-    caption="The full footprint keeps the central disk, outer fields, and uneven coverage in the same coordinate frame."
-    sourceHref="https://archive.chaipat.cc/figures/m81/m81-191.webp"
-    width={1731}
-    height={1800}
-    contain
-    compact
-  />
-  <ResearchFigure
-    src="/research/m82-019.webp"
-    alt="M82 overdensity residual map with axes and color scale"
-    label="PLATE 03B · M82"
-    title="Observed density minus background"
-    caption="The residual view reveals asymmetric structure while retaining the complete spatial scale and legend."
-    sourceHref="https://archive.chaipat.cc/figures/m82/m82-019.webp"
-    width={1800}
-    height={1529}
-    contain
-    compact
-  />
-</div>
+<ResearchFigure
+  src="/research/m81-191.webp"
+  alt="Full M81 group resolved-star density map with HST field coverage"
+  label="PLATE 03 · DENSITY MAP"
+  title="Group-scale stellar-density map"
+  caption="The full footprint keeps the central disk, outer fields, and uneven coverage in the same coordinate frame."
+  sourceHref="https://archive.chaipat.cc/figures/m81/m81-191.webp"
+  width={1731}
+  height={1800}
+  contain
+/>
 
 ### 4. Background model
 
@@ -104,96 +90,35 @@ Use environment-specific background estimates:
 
 Compare observed counts with the modeled background under counting uncertainty. Candidate structures should be expressed as evidence relative to the expected background, not only as visually bright pixels.
 
-<div className="kiwis-figure-pair">
-  <ResearchFigure
-    src="/research/m81-084.webp"
-    alt="Side-by-side M81 combined hierarchical signal-to-noise maps"
-    label="PLATE 05A · COMBINED S/N"
-    title="Compare significance views side by side"
-    caption="Two complete significance maps expose which structures persist after hierarchical combination."
-    sourceHref="https://archive.chaipat.cc/figures/m81/m81-084.webp"
-    width={1800}
-    height={821}
-    contain
-    compact
-  />
-  <ResearchFigure
-    src="/research/m81-signal-to-noise.webp"
-    alt="M81 substructure signal-to-noise map with candidate detections labeled by significance"
-    label="PLATE 05B · CANDIDATES"
-    title="Candidates expressed in sigma units"
-    caption="The labeled S/N map turns density residuals into evidence that can be compared numerically."
-    sourceHref="https://archive.chaipat.cc/figures/m81/m81-174.webp"
-    width={1800}
-    height={1640}
-    contain
-    compact
-  />
-</div>
+<ResearchFigure
+  src="/research/m81-signal-to-noise.webp"
+  alt="M81 substructure signal-to-noise map with candidate detections labeled by significance"
+  label="PLATE 05 · CANDIDATES"
+  title="Candidates expressed in sigma units"
+  caption="The labeled S/N map turns density residuals into evidence that can be compared numerically."
+  sourceHref="https://archive.chaipat.cc/figures/m81/m81-174.webp"
+  width={1800}
+  height={1640}
+  contain
+/>
 
 ### 6. Validation
 
 Review the candidate across alternate views, masks, smoothing choices, and source selections. Preserve complete axes and legends in the final figure record and link each output to its analysis workspace.
 
-<div className="kiwis-figure-pair">
-  <ResearchFigure
-    src="/research/m81-method-comparison.webp"
-    alt="Six-panel comparison of spatial overdensity and matched-filter methods for M81"
-    label="PLATE 06A · CROSS-CHECK"
-    title="Compare methods before interpretation"
-    caption="Agreement and disagreement between spatial-overdensity and matched-filter pipelines define what still needs review."
-    sourceHref="https://archive.chaipat.cc/figures/m81/m81-122.webp"
-    width={1800}
-    height={1215}
-    contain
-    compact
-  />
-  <ResearchFigure
-    src="/research/m82-041.webp"
-    alt="Monte Carlo distribution comparing random cluster counts with the M82 analysis result"
-    label="PLATE 06B · MONTE CARLO"
-    title="Test whether the result exceeds chance"
-    caption="Repeated random trials provide a visible reference distribution instead of relying on a single attractive map."
-    sourceHref="https://archive.chaipat.cc/figures/m82/m82-041.webp"
-    width={1800}
-    height={1070}
-    contain
-    compact
-  />
-</div>
+<ResearchFigure
+  src="/research/m81-method-comparison.webp"
+  alt="Six-panel comparison of spatial overdensity and matched-filter methods for M81"
+  label="PLATE 06 · CROSS-CHECK"
+  title="Compare methods before interpretation"
+  caption="Agreement and disagreement between spatial-overdensity and matched-filter pipelines define what still needs review."
+  sourceHref="https://archive.chaipat.cc/figures/m81/m81-122.webp"
+  width={1800}
+  height={1215}
+  contain
+/>
 
 </Steps>
-
-## Synthesis plates
-
-The final record reconnects derived signals to stellar populations and recovery limits. These are summary views, not substitutes for the intermediate evidence above.
-
-<div className="kiwis-figure-pair">
-  <ResearchFigure
-    src="/research/m81-043.webp"
-    alt="M81 spatial overview paired with regional color-magnitude diagrams"
-    label="PLATE 07A · POPULATIONS"
-    title="Reconnect regions to their CMD evidence"
-    caption="The spatial map and regional color-magnitude diagrams stay together so position and population are interpreted as one record."
-    sourceHref="https://archive.chaipat.cc/figures/m81/m81-043.webp"
-    width={1800}
-    height={1142}
-    contain
-    compact
-  />
-  <ResearchFigure
-    src="/research/m82-062.webp"
-    alt="M82 injection-recovery curves for three spatial scales"
-    label="PLATE 07B · RECOVERY"
-    title="Measure what the pipeline can recover"
-    caption="Injection tests show how recovery changes with signal strength and scale, setting the boundary for non-detections."
-    sourceHref="https://archive.chaipat.cc/figures/m82/m82-062.webp"
-    width={1530}
-    height={1044}
-    contain
-    compact
-  />
-</div>
 
 ## Interpretation boundary
 

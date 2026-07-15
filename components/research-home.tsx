@@ -79,24 +79,6 @@ const visualIndex = [
     height: 1519,
   },
   {
-    id: "M81-088",
-    stage: "Candidate review",
-    title: "Twenty candidate regions inspected together",
-    src: "/research/m81-088.webp",
-    alt: "Gallery of twenty M81 candidate substructure regions",
-    width: 1800,
-    height: 1552,
-  },
-  {
-    id: "M82-019",
-    stage: "Density residual",
-    title: "Observed density minus the M82 background",
-    src: "/research/m82-019.webp",
-    alt: "M82 overdensity residual map with complete axes and color scale",
-    width: 1800,
-    height: 1529,
-  },
-  {
     id: "M82-048",
     stage: "Catalog context",
     title: "Discoveries compared with published objects",
@@ -104,16 +86,6 @@ const visualIndex = [
     alt: "M82 discoveries and literature catalog objects plotted over the galaxy",
     width: 1800,
     height: 1542,
-  },
-  {
-    id: "M82-055",
-    stage: "Validation",
-    title: "CMD-matched evidence across three scales",
-    src: "/research/m82-055.webp",
-    alt: "Three-panel M82 color-magnitude matched multiscale validation figure",
-    width: 1800,
-    height: 585,
-    wide: true,
   },
 ];
 
@@ -152,19 +124,19 @@ export function ResearchHome() {
         <section className="kiwis-visual-index" aria-labelledby="visual-index-title">
           <div className="kiwis-visual-index-heading">
             <div>
-              <span>PLATE REGISTER / 001–006</span>
+              <span>SELECTED PLATES / 001–003</span>
               <h2 id="visual-index-title">Read the evidence visually.</h2>
             </div>
             <p>
-              Six complete frames sample the path from field geometry to validation.
-              Axes, legends, and comparison panels remain intact.
+              Three complete frames establish context, method, and catalog comparison
+              without turning the notebook into another figure archive.
             </p>
             <a href="https://archive.chaipat.cc">Browse all 257 figures <span aria-hidden="true">↗</span></a>
           </div>
           <div className="kiwis-visual-grid">
             {visualIndex.map((figure, index) => (
               <a
-                className={`${figure.featured ? "is-featured" : ""}${figure.wide ? " is-wide" : ""}`}
+                className={figure.featured ? "is-featured" : ""}
                 href={`https://archive.chaipat.cc/figures/${figure.id.toLowerCase().startsWith("m81") ? "m81" : "m82"}/${figure.id.toLowerCase()}.webp`}
                 key={figure.id}
               >
@@ -173,13 +145,13 @@ export function ResearchHome() {
                   alt={figure.alt}
                   width={figure.width}
                   height={figure.height}
-                  sizes={figure.featured || figure.wide ? "100vw" : "(max-width: 760px) 100vw, 50vw"}
+                  sizes={figure.featured ? "100vw" : "(max-width: 760px) 100vw, 50vw"}
                   priority={index === 0}
                 />
                 <span>
                   <small>{figure.id} · {figure.stage}</small>
                   <strong>{figure.title}</strong>
-                  <i aria-hidden="true">↗</i>
+                  <i>Open record</i>
                 </span>
               </a>
             ))}

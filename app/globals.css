@@ -247,13 +247,31 @@ article:not(:has(.kiwis-home)) main a {
   text-transform: uppercase;
 }
 
-.nextra-callout {
-  border: 1px solid var(--kiwi-rule) !important;
-  border-left: 4px solid var(--kiwi-accent-deep) !important;
-  border-radius: 0 !important;
-  background: color-mix(in srgb, var(--kiwi-accent) 11%, var(--kiwi-paper)) !important;
-  color: var(--kiwi-ink) !important;
-  box-shadow: none !important;
+.kiwis-ledger-note {
+  display: grid;
+  margin: 3rem 0;
+  padding: 1rem 1.2rem;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 1.5rem;
+  border-top: 1px solid var(--kiwi-ink);
+  border-bottom: 1px solid var(--kiwi-ink);
+  background: color-mix(in srgb, var(--kiwi-accent) 7%, var(--kiwi-paper));
+  align-items: start;
+}
+
+.kiwis-ledger-note > span {
+  color: var(--kiwi-accent-deep);
+  font-family: var(--kiwi-mono);
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.kiwis-ledger-note p {
+  margin: 0 !important;
+  color: var(--kiwi-ink-soft) !important;
+  font-size: 0.82rem;
+  line-height: 1.6 !important;
 }
 
 .nextra-steps {
@@ -552,14 +570,12 @@ body:has(.kiwis-home) .nextra-breadcrumb {
   color: #eaf1e9;
 }
 
-.kiwis-visual-grid > a:nth-child(even),
-.kiwis-visual-grid > a.is-featured,
-.kiwis-visual-grid > a.is-wide {
+.kiwis-visual-grid > a:last-child,
+.kiwis-visual-grid > a.is-featured {
   border-right: 0;
 }
 
-.kiwis-visual-grid > a.is-featured,
-.kiwis-visual-grid > a.is-wide {
+.kiwis-visual-grid > a.is-featured {
   grid-column: 1 / -1;
 }
 
@@ -594,7 +610,13 @@ body:has(.kiwis-home) .nextra-breadcrumb {
 
 .kiwis-visual-grid i {
   color: var(--kiwi-accent);
+  font-family: var(--kiwi-mono);
+  font-size: 0.54rem;
+  font-weight: 800;
   font-style: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .kiwis-visual-grid > a:hover > span {
@@ -905,22 +927,6 @@ body:has(.kiwis-home) .nextra-breadcrumb {
   object-fit: contain;
 }
 
-.kiwis-figure-pair {
-  display: grid;
-  margin: 3rem 0 4rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.kiwis-figure-pair .kiwis-research-figure {
-  margin: 0;
-}
-
-.kiwis-research-figure.kiwi-compact figcaption {
-  grid-template-columns: 1fr;
-}
-
 .kiwis-research-figure figcaption {
   display: grid;
   padding: 1.1rem;
@@ -1003,6 +1009,7 @@ body:has(.kiwis-home) .nextra-breadcrumb {
   }
 
   .kiwis-visual-index-heading,
+  .kiwis-ledger-note,
   .kiwis-research-figure figcaption {
     grid-template-columns: 1fr;
   }
@@ -1062,13 +1069,12 @@ body:has(.kiwis-home) .nextra-breadcrumb {
     white-space: normal;
   }
 
-  .kiwis-visual-grid,
-  .kiwis-figure-pair {
+  .kiwis-visual-grid {
     grid-template-columns: 1fr;
   }
 
   .kiwis-visual-grid > a,
-  .kiwis-visual-grid > a:nth-child(even) {
+  .kiwis-visual-grid > a:last-child {
     grid-column: auto;
     border-right: 0;
   }
