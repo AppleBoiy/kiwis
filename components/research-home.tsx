@@ -60,32 +60,22 @@ const network = [
 
 const visualIndex = [
   {
-    id: "M81-175",
-    stage: "Detection summary",
-    title: "M81 substructure across four analytical views",
-    src: "/research/m81-175.webp",
-    alt: "Four-panel M81 substructure analysis showing raw density, background model, residual, and signal-to-noise views",
+    id: "M81-099",
+    stage: "Density models",
+    title: "Double Residual Map V2",
+    src: "/research/m81-099.webp",
+    alt: "Double residual density map of M81 after removing the M81 and DDO 66 models",
     width: 1800,
-    height: 1610,
-    featured: true,
+    height: 1786,
   },
   {
-    id: "M81-017",
-    stage: "Field context",
-    title: "HST footprints within the M81 group",
-    src: "/research/m81-017.webp",
-    alt: "M81 group context map showing HST field footprints and neighboring galaxies",
+    id: "M81-107",
+    stage: "Validation",
+    title: "CMD Spatial 4 V3",
+    src: "/research/m81-107.webp",
+    alt: "Complete smooth disk density map of M81 made from the red-star color magnitude selection",
     width: 1800,
-    height: 1519,
-  },
-  {
-    id: "M82-048",
-    stage: "Catalog context",
-    title: "Discoveries compared with published objects",
-    src: "/research/m82-048.webp",
-    alt: "M82 discoveries and literature catalog objects plotted over the galaxy",
-    width: 1800,
-    height: 1542,
+    height: 1783,
   },
 ];
 
@@ -124,20 +114,19 @@ export function ResearchHome() {
         <section className="kiwis-visual-index" aria-labelledby="visual-index-title">
           <div className="kiwis-visual-index-heading">
             <div>
-              <span>SELECTED PLATES / 001–003</span>
+              <span>SELECTED PLATES / 001–002</span>
               <h2 id="visual-index-title">Read the evidence visually.</h2>
             </div>
             <p>
-              Three complete frames establish context, method, and catalog comparison
-              without turning the notebook into another figure archive.
+              Two complementary M81 frames anchor the notebook: one isolates residual
+              structure, while the other validates the smooth stellar disk.
             </p>
             <a href="https://archive.chaipat.cc">Browse all 257 figures <span aria-hidden="true">↗</span></a>
           </div>
           <div className="kiwis-visual-grid">
             {visualIndex.map((figure, index) => (
               <a
-                className={figure.featured ? "is-featured" : ""}
-                href={`https://archive.chaipat.cc/figures/${figure.id.toLowerCase().startsWith("m81") ? "m81" : "m82"}/${figure.id.toLowerCase()}.webp`}
+                href={`https://archive.chaipat.cc/figures/m81/${figure.id.toLowerCase()}.webp`}
                 key={figure.id}
               >
                 <Image
@@ -145,7 +134,7 @@ export function ResearchHome() {
                   alt={figure.alt}
                   width={figure.width}
                   height={figure.height}
-                  sizes={figure.featured ? "100vw" : "(max-width: 760px) 100vw, 50vw"}
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   priority={index === 0}
                 />
                 <span>

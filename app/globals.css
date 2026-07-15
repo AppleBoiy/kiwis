@@ -570,13 +570,8 @@ body:has(.kiwis-home) .nextra-breadcrumb {
   color: #eaf1e9;
 }
 
-.kiwis-visual-grid > a:last-child,
-.kiwis-visual-grid > a.is-featured {
+.kiwis-visual-grid > a:last-child {
   border-right: 0;
-}
-
-.kiwis-visual-grid > a.is-featured {
-  grid-column: 1 / -1;
 }
 
 .kiwis-visual-grid img {
