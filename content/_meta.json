@@ -1,0 +1,27 @@
+{
+  "index": {
+    "type": "page",
+    "title": "KiWiS",
+    "display": "hidden"
+  },
+  "notes": {
+    "type": "page",
+    "title": "Research Notes"
+  },
+  "methods": {
+    "type": "page",
+    "title": "Methods"
+  },
+  "glossary": {
+    "type": "page",
+    "title": "Glossary"
+  },
+  "sources": {
+    "type": "page",
+    "title": "Sources"
+  },
+  "legacy": {
+    "type": "page",
+    "title": "Legacy"
+  }
+}

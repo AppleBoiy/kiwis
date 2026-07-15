@@ -21,6 +21,4 @@ export function Screenshot({ src, alt, full }) {
   );
 }
 
-module.exports = {
-  Screenshot,
-};
+export default Screenshot;

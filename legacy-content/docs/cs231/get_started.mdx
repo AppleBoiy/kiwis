@@ -1,0 +1,40 @@
+import { Tabs, Steps, Callout, Cards } from "nextra/components";
+import { Video } from "@components/video";
+import {DownloadIcon} from "@components/icons";
+
+# Getting Started with x86 Assembly
+
+<Callout emoji="👾" type="info">
+    Tested on macOS Sonoma 14.0
+</Callout>
+
+## Prerequisites
+
+For this guide, you will need to have the following tools installed on your system:
+
+- **MASM**: Microsoft Macro Assembler (MASM) is an x86 assembler.
+- **DOSBox**: DOSBox is an x86 emulator that allows you to run old DOS applications on modern operating systems.
+
+&nbsp;
+
+export function FAQBox({ title, children }) {
+  return (
+    <details
+    open
+    className="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4"
+>
+    <summary>
+        <strong className="text-lg">{title}</strong>
+    </summary>
+    <div className="nx-p-2">{children}</div>
+</details>
+  )
+}
+
+<FAQBox title="If you don't have these tools installed, you can click on the links below to download and install them">
+    <Cards num={2}>
+        <Cards.Card icon={<DownloadIcon />} title="Download MASM" href="https://www.microsoft.com/en-us/download/details.aspx?id=12654"></Cards.Card>
+        <Cards.Card icon={<DownloadIcon />} title="Download DOSBox" href="https://www.dosbox.com/download.php?main=1"></Cards.Card>
+    </Cards>
+</FAQBox>
+

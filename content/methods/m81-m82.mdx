@@ -1,0 +1,50 @@
+import { Callout, Steps } from "nextra/components";
+
+# M81 / M82 resolved-stellar-population workflow
+
+This ledger documents how resolved-star catalogs become interpretable evidence for faint structure around M81 and M82. The two galaxies share a common pipeline but require different background treatments.
+
+<Callout type="info" emoji="↗">
+  The complete figure record is available in the [M81/M82 Figure Archive](https://archive.chaipat.cc).
+</Callout>
+
+<Steps>
+
+### 1. Catalog preparation
+
+Select stellar sources from the available HST fields, retain field geometry, and preserve the identifiers required to trace every processed sample back to its origin.
+
+### 2. Overlap removal
+
+Detect repeated measurements where neighboring fields overlap. Resolve duplicates before spatial aggregation so the same star does not artificially increase local density.
+
+### 3. Density mapping
+
+Aggregate the cleaned catalog onto a `200 × 200` spatial grid. Maintain consistent coordinate transforms and field footprints so density variations remain physically interpretable.
+
+### 4. Background model
+
+Use environment-specific background estimates:
+
+- **M81:** wide-field hierarchical evidence across 33 HST fields;
+- **M82:** a localized median background that is less sensitive to its asymmetric starburst halo.
+
+### 5. Poisson signal-to-noise
+
+Compare observed counts with the modeled background under counting uncertainty. Candidate structures should be expressed as evidence relative to the expected background, not only as visually bright pixels.
+
+### 6. Validation
+
+Review the candidate across alternate views, masks, smoothing choices, and source selections. Preserve complete axes and legends in the final figure record and link each output to its analysis workspace.
+
+</Steps>
+
+## Interpretation boundary
+
+The archive records analytical evidence; it does not turn every enhancement into an astrophysical claim. Morphology, robustness across processing choices, and agreement with external context remain necessary before interpretation.
+
+## Connected records
+
+- [Browse all figures ↗](https://archive.chaipat.cc)
+- [Inspect related knowledge nodes ↗](https://graph.chaipat.cc)
+- [Return to the project index ↗](https://chaipat.cc)

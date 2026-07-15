@@ -1,4 +1,4 @@
-export default function Video({ src }) {
+export function Video({ src }) {
   return (
     <video
       muted
@@ -12,6 +12,4 @@ export default function Video({ src }) {
   );
 }
 
-module.exports = {
-  Video,
-};
+export default Video;

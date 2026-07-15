@@ -1,18 +1,24 @@
-<div align="center">
-    <h1>Welcome to KIWIS!!</h1>
-    <a href="https://kiwis.vercel.app">
-        <img src="https://raw.githubusercontent.com/ape-docs/kiwis.med/main/public/mascot.png" width="300px"/>
-    </a>
-    <p>This wiki is designed to assist computer science students at <em><b>Chiang Mai University, Thailand</b></em>, in configuring their computers for effective study and work.</p>
-</div>
+# KiWiS
 
-> [!Note]
->
-> `THIS REPOSITORY IS CURRENTLY UNDER DEVELOPMENT`
->
-> If you encounter any issues, have suggestions, or would like to know more about my development progress, please don't hesitate to [contact me](mailto:contact.chaipat@gmail.com).
-> You can also explore [my roadmap](https://github.com/AppleBoiy/AppleBoiy/blob/main/README.md#whats-on-my-to-do-list) to see what's on my to-do list.
+**Knowledge Workspace for Integrated Science**
 
-## [Explore the Wiki &#10148;](https://kiwis.vercel.app)
+KiWiS is the readable knowledge layer of the `chaipat.cc` research network. It connects research notes, method ledgers, glossary entries, and source provenance across astronomy, machine learning, ontology engineering, and knowledge graphs.
 
-Need assistance? Check out my [discussion board](https://github.com/AppleBoiy/cs-wiki101/discussions) or review the [GitHub status page](https://www.githubstatus.com).
+## Connected nodes
+
+- [chaipat.cc](https://chaipat.cc) — identity and project index
+- [archive.chaipat.cc](https://archive.chaipat.cc) — M81/M82 figure evidence
+- [graph.chaipat.cc](https://graph.chaipat.cc) — knowledge relationships
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+The original CMU computer-science guides remain available under `/legacy` and their existing URLs continue to work.
+
+## License
+
+MIT
