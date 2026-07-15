@@ -1,4 +1,5 @@
 import { Callout, Steps } from "nextra/components";
+import { ResearchFigure } from "@components/research-figure";
 
 # M81 / M82 resolved-stellar-population workflow
 
@@ -21,6 +22,17 @@ This ledger documents how resolved-star catalogs become interpretable evidence f
 
 Select stellar sources from the available HST fields, retain field geometry, and preserve the identifiers required to trace every processed sample back to its origin.
 
+<ResearchFigure
+  src="/research/m81-field-footprints.webp"
+  alt="M81 sky-plane and face-on deprojected maps with HST field footprints"
+  label="PLATE 01 · INPUT GEOMETRY"
+  title="Field footprints before aggregation"
+  caption="The same catalog is shown in sky-plane and deprojected coordinates. Yellow footprints make uneven HST coverage visible before any density structure is interpreted."
+  sourceHref="https://archive.chaipat.cc/figures/m81/m81-140.webp"
+  width={1800}
+  height={1084}
+/>
+
 ### 2. Overlap removal
 
 Detect repeated measurements where neighboring fields overlap. Resolve duplicates before spatial aggregation so the same star does not artificially increase local density.
@@ -36,13 +48,49 @@ Use environment-specific background estimates:
 - **M81:** wide-field hierarchical evidence across 33 HST fields;
 - **M82:** a localized median background that is less sensitive to its asymmetric starburst halo.
 
+<ResearchFigure
+  src="/research/m82-selection-function.webp"
+  alt="Six-panel M82 empirical selection function showing coverage, density, depth, background, and mask"
+  label="PLATE 02 · SELECTION FUNCTION"
+  title="Separate signal from observing depth"
+  caption="Coverage, source density, depth proxy, tracer density, background model, and usable mask are viewed together so detector and field-depth effects are not mistaken for astrophysical structure."
+  sourceHref="https://archive.chaipat.cc/figures/m82/m82-064.webp"
+  width={1800}
+  height={1105}
+  contain
+/>
+
 ### 5. Poisson signal-to-noise
 
 Compare observed counts with the modeled background under counting uncertainty. Candidate structures should be expressed as evidence relative to the expected background, not only as visually bright pixels.
 
+<ResearchFigure
+  src="/research/m81-signal-to-noise.webp"
+  alt="M81 substructure signal-to-noise map with candidate detections labeled by significance"
+  label="PLATE 03 · DETECTION"
+  title="Candidates expressed in sigma units"
+  caption="The S/N map converts density residuals into comparable evidence and labels candidate peaks. Brightness alone is not the decision boundary."
+  sourceHref="https://archive.chaipat.cc/figures/m81/m81-174.webp"
+  width={1800}
+  height={1640}
+  contain
+/>
+
 ### 6. Validation
 
 Review the candidate across alternate views, masks, smoothing choices, and source selections. Preserve complete axes and legends in the final figure record and link each output to its analysis workspace.
+
+<ResearchFigure
+  src="/research/m81-method-comparison.webp"
+  alt="Six-panel comparison of spatial overdensity and matched-filter methods for M81"
+  label="PLATE 04 · CROSS-CHECK"
+  title="Compare methods before interpretation"
+  caption="Spatial overdensity and matched-filter pipelines expose different structures. Agreement and disagreement between them define what still needs validation."
+  sourceHref="https://archive.chaipat.cc/figures/m81/m81-122.webp"
+  width={1800}
+  height={1215}
+  contain
+/>
 
 </Steps>
 

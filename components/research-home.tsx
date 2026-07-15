@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const fields = [
   {
@@ -88,6 +89,22 @@ export function ResearchHome() {
             </nav>
           </div>
         </div>
+
+        <figure className="kiwis-cover-figure">
+          <Image
+            src="/research/m81-m82-field-map.webp"
+            alt="Side-by-side scientific field map of M81 and M82"
+            width={1672}
+            height={941}
+            sizes="100vw"
+            priority
+          />
+          <figcaption>
+            <span>PLATE 001 / M81 + M82</span>
+            <p>Resolved stellar populations turn faint galactic structure into countable, testable evidence.</p>
+            <a href="https://archive.chaipat.cc">Explore the complete figure archive <span aria-hidden="true">↗</span></a>
+          </figcaption>
+        </figure>
 
         <dl className="kiwis-cover-metrics">
           <div><dt>Research domains</dt><dd>03</dd></div>
