@@ -275,11 +275,8 @@ article:not(:has(.kiwis-home)) main a {
 }
 
 .nextra-steps {
-  --kiwis-step-indent: 1.5rem;
-  --kiwis-step-line-half: 0.03125rem;
-  --kiwis-step-marker-radius: 1.03125rem;
   margin-inline-start: 1rem !important;
-  padding-inline-start: var(--kiwis-step-indent) !important;
+  padding-inline-start: 1.5rem !important;
   border-color: var(--kiwi-rule) !important;
 }
 
@@ -288,10 +285,6 @@ article:not(:has(.kiwis-home)) main a {
 }
 
 .nextra-steps h3::before {
-  inset-inline-start: calc(
-    -1 * var(--kiwis-step-indent) - var(--kiwis-step-marker-radius) - var(--kiwis-step-line-half)
-  );
-  margin-inline-start: 0 !important;
   border: 1px solid var(--kiwi-ink) !important;
   background: var(--kiwi-paper) !important;
   color: var(--kiwi-ink) !important;
