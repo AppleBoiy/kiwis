@@ -19,7 +19,7 @@ This ledger documents how resolved-star catalogs become interpretable evidence f
 
 <Steps>
 
-### 1. Catalog preparation
+### Catalog preparation
 
 Select stellar sources from the available HST fields, retain field geometry, and preserve the identifiers required to trace every processed sample back to its origin.
 
@@ -35,7 +35,7 @@ Select stellar sources from the available HST fields, retain field geometry, and
   priority
 />
 
-### 2. Overlap removal
+### Overlap removal
 
 Detect repeated measurements where neighboring fields overlap. Resolve duplicates before spatial aggregation so the same star does not artificially increase local density.
 
@@ -51,7 +51,7 @@ Detect repeated measurements where neighboring fields overlap. Resolve duplicate
   contain
 />
 
-### 3. Density mapping
+### Density mapping
 
 Aggregate the cleaned catalog onto a `200 × 200` spatial grid. Maintain consistent coordinate transforms and field footprints so density variations remain physically interpretable.
 
@@ -67,7 +67,7 @@ Aggregate the cleaned catalog onto a `200 × 200` spatial grid. Maintain consist
   contain
 />
 
-### 4. Background model
+### Background model
 
 Use environment-specific background estimates:
 
@@ -86,7 +86,7 @@ Use environment-specific background estimates:
   contain
 />
 
-### 5. Poisson signal-to-noise
+### Poisson signal-to-noise
 
 Compare observed counts with the modeled background under counting uncertainty. Candidate structures should be expressed as evidence relative to the expected background, not only as visually bright pixels.
 
@@ -102,7 +102,7 @@ Compare observed counts with the modeled background under counting uncertainty. 
   contain
 />
 
-### 6. Validation
+### Validation
 
 Review the candidate across alternate views, masks, smoothing choices, and source selections. Preserve complete axes and legends in the final figure record and link each output to its analysis workspace.
 

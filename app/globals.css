@@ -285,10 +285,14 @@ article:not(:has(.kiwis-home)) main a {
 }
 
 .nextra-steps h3::before {
+  display: grid !important;
+  place-items: center;
   border: 1px solid var(--kiwi-ink) !important;
   background: var(--kiwi-paper) !important;
   color: var(--kiwi-ink) !important;
   font-family: var(--kiwi-mono);
+  line-height: 1 !important;
+  text-indent: 0 !important;
   box-shadow: none !important;
 }
 
