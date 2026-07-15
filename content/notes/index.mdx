@@ -12,18 +12,50 @@ The current astronomy work uses resolved stars as tracers of low-surface-brightn
 - Which background model is appropriate for each galaxy environment?
 - Does a candidate feature remain significant under Poisson counting uncertainty?
 
-<ResearchFigure
-  src="/research/m81-m82-field-map.webp"
-  alt="Side-by-side scientific field map of M81 and M82"
-  label="ORIENTATION PLATE"
-  title="Two environments, one evidence workflow"
-  caption="M81’s extended spiral structure and M82’s asymmetric starburst environment require a shared catalog workflow but different background assumptions."
-  sourceHref="https://archive.chaipat.cc"
-  width={1672}
-  height={941}
-/>
+<div className="kiwis-figure-pair">
+  <ResearchFigure
+    src="/research/m81-175.webp"
+    alt="Four-panel M81 summary showing raw density, background, residual, and signal-to-noise views"
+    label="NOTE PLATE · M81"
+    title="One target, four analytical layers"
+    caption="Raw counts, a smooth background, residual structure, and significance answer different questions and should not be collapsed into one image."
+    sourceHref="https://archive.chaipat.cc/figures/m81/m81-175.webp"
+    width={1800}
+    height={1610}
+    contain
+    compact
+  />
+  <ResearchFigure
+    src="/research/m82-030.webp"
+    alt="Nine-panel comparison of M82 substructure detection methods"
+    label="NOTE PLATE · M82"
+    title="Method choice changes what becomes visible"
+    caption="Nine aligned views make it easier to distinguish persistent structure from features produced by one detector."
+    sourceHref="https://archive.chaipat.cc/figures/m82/m82-030.webp"
+    width={1800}
+    height={1784}
+    contain
+    compact
+  />
+</div>
 
 [Read the M81/M82 method ledger →](/methods/m81-m82)
+
+### Reading a diagnostic map
+
+Start with the coordinate frame and footprint, then read the color scale, mask, and background assumption before interpreting a bright region. A zoomed diagnostic is useful only when its location in the larger field remains traceable.
+
+<ResearchFigure
+  src="/research/m82-053.webp"
+  alt="High-resolution KDE map of the M82 empty-gap region with complete coordinate axes and color scale"
+  label="DETAIL PLATE · M82-053"
+  title="A detailed view still needs scale and coordinates"
+  caption="The high-resolution KDE reveals local structure while the retained axes and color bar keep the detail connected to the wider field and its density scale."
+  sourceHref="https://archive.chaipat.cc/figures/m82/m82-053.webp"
+  width={1800}
+  height={911}
+  contain
+/>
 
 ## Ontology engineering
 

@@ -492,50 +492,113 @@ body:has(.kiwis-home) .nextra-breadcrumb {
   border-top: 1px solid var(--kiwi-ink);
 }
 
-.kiwis-cover-figure {
-  margin: 0;
+.kiwis-visual-index {
   border-top: 1px solid var(--kiwi-ink);
-  background: #0a0f0d;
-}
-
-.kiwis-cover-figure > img {
-  display: block;
-  width: 100%;
-  max-height: 640px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.kiwis-cover-figure figcaption {
-  display: grid;
-  padding: 1.2rem clamp(1.25rem, 4vw, 4.5rem);
-  grid-template-columns: 0.45fr 1fr auto;
-  gap: clamp(1rem, 3vw, 3rem);
-  border-top: 1px solid rgba(238, 243, 234, 0.25);
   background: var(--kiwi-night);
   color: #eaf1e9;
-  align-items: start;
 }
 
-.kiwis-cover-figure figcaption span,
-.kiwis-cover-figure figcaption a {
+.kiwis-visual-index-heading {
+  display: grid;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.25rem, 5vw, 5.5rem);
+  grid-template-columns: 1.1fr 1fr auto;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+}
+
+.kiwis-visual-index-heading span,
+.kiwis-visual-index-heading a {
   font-family: var(--kiwi-mono);
   font-size: 0.6rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
-.kiwis-cover-figure figcaption p {
-  margin: 0;
-  color: #b8c5bb;
-  font-size: 0.82rem;
-  line-height: 1.55;
+.kiwis-visual-index-heading h2 {
+  margin: 0.8rem 0 0;
+  color: #f1f4ed;
+  font-family: var(--kiwi-serif);
+  font-size: clamp(2.2rem, 4.5vw, 4.6rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
 }
 
-.kiwis-cover-figure figcaption a {
+.kiwis-visual-index-heading p {
+  margin: 0;
+  color: #b8c5bb;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.kiwis-visual-index-heading a {
   color: var(--kiwi-accent);
   white-space: nowrap;
+}
+
+.kiwis-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(238, 243, 234, 0.28);
+}
+
+.kiwis-visual-grid > a {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  border-right: 1px solid rgba(238, 243, 234, 0.28);
+  border-bottom: 1px solid rgba(238, 243, 234, 0.28);
+  color: #eaf1e9;
+}
+
+.kiwis-visual-grid > a:nth-child(even),
+.kiwis-visual-grid > a.is-featured,
+.kiwis-visual-grid > a.is-wide {
+  border-right: 0;
+}
+
+.kiwis-visual-grid > a.is-featured,
+.kiwis-visual-grid > a.is-wide {
+  grid-column: 1 / -1;
+}
+
+.kiwis-visual-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #070b09;
+}
+
+.kiwis-visual-grid > a > span {
+  display: grid;
+  padding: 1rem clamp(1rem, 2.5vw, 2rem);
+  grid-template-columns: minmax(8rem, 0.6fr) 1fr auto;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.kiwis-visual-grid small {
+  color: var(--kiwi-accent);
+  font-family: var(--kiwi-mono);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.kiwis-visual-grid strong {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.kiwis-visual-grid i {
+  color: var(--kiwi-accent);
+  font-style: normal;
+}
+
+.kiwis-visual-grid > a:hover > span {
+  background: rgba(179, 239, 75, 0.08);
 }
 
 .kiwis-cover-metrics div {
@@ -835,12 +898,27 @@ body:has(.kiwis-home) .nextra-breadcrumb {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 38rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .kiwis-figure-image.kiwi-contain img {
   object-fit: contain;
+}
+
+.kiwis-figure-pair {
+  display: grid;
+  margin: 3rem 0 4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.kiwis-figure-pair .kiwis-research-figure {
+  margin: 0;
+}
+
+.kiwis-research-figure.kiwi-compact figcaption {
+  grid-template-columns: 1fr;
 }
 
 .kiwis-research-figure figcaption {
@@ -924,9 +1002,13 @@ body:has(.kiwis-home) .nextra-breadcrumb {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .kiwis-cover-figure figcaption,
+  .kiwis-visual-index-heading,
   .kiwis-research-figure figcaption {
     grid-template-columns: 1fr;
+  }
+
+  .kiwis-visual-index-heading {
+    align-items: start;
   }
 }
 
@@ -975,14 +1057,29 @@ body:has(.kiwis-home) .nextra-breadcrumb {
     grid-template-columns: 1fr;
   }
 
-  .kiwis-cover-figure > img {
-    min-height: 18rem;
-    object-fit: cover;
-  }
-
-  .kiwis-cover-figure figcaption a,
+  .kiwis-visual-index-heading a,
   .kiwis-research-figure figcaption a {
     white-space: normal;
+  }
+
+  .kiwis-visual-grid,
+  .kiwis-figure-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .kiwis-visual-grid > a,
+  .kiwis-visual-grid > a:nth-child(even) {
+    grid-column: auto;
+    border-right: 0;
+  }
+
+  .kiwis-visual-grid > a > span {
+    grid-template-columns: 1fr auto;
+  }
+
+  .kiwis-visual-grid strong {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 
   .kiwis-cover-actions a:first-child {

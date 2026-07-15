@@ -58,6 +58,65 @@ const network = [
   },
 ];
 
+const visualIndex = [
+  {
+    id: "M81-175",
+    stage: "Detection summary",
+    title: "M81 substructure across four analytical views",
+    src: "/research/m81-175.webp",
+    alt: "Four-panel M81 substructure analysis showing raw density, background model, residual, and signal-to-noise views",
+    width: 1800,
+    height: 1610,
+    featured: true,
+  },
+  {
+    id: "M81-017",
+    stage: "Field context",
+    title: "HST footprints within the M81 group",
+    src: "/research/m81-017.webp",
+    alt: "M81 group context map showing HST field footprints and neighboring galaxies",
+    width: 1800,
+    height: 1519,
+  },
+  {
+    id: "M81-088",
+    stage: "Candidate review",
+    title: "Twenty candidate regions inspected together",
+    src: "/research/m81-088.webp",
+    alt: "Gallery of twenty M81 candidate substructure regions",
+    width: 1800,
+    height: 1552,
+  },
+  {
+    id: "M82-019",
+    stage: "Density residual",
+    title: "Observed density minus the M82 background",
+    src: "/research/m82-019.webp",
+    alt: "M82 overdensity residual map with complete axes and color scale",
+    width: 1800,
+    height: 1529,
+  },
+  {
+    id: "M82-048",
+    stage: "Catalog context",
+    title: "Discoveries compared with published objects",
+    src: "/research/m82-048.webp",
+    alt: "M82 discoveries and literature catalog objects plotted over the galaxy",
+    width: 1800,
+    height: 1542,
+  },
+  {
+    id: "M82-055",
+    stage: "Validation",
+    title: "CMD-matched evidence across three scales",
+    src: "/research/m82-055.webp",
+    alt: "Three-panel M82 color-magnitude matched multiscale validation figure",
+    width: 1800,
+    height: 585,
+    wide: true,
+  },
+];
+
 export function ResearchHome() {
   return (
     <main className="kiwis-home">
@@ -90,21 +149,42 @@ export function ResearchHome() {
           </div>
         </div>
 
-        <figure className="kiwis-cover-figure">
-          <Image
-            src="/research/m81-m82-field-map.webp"
-            alt="Side-by-side scientific field map of M81 and M82"
-            width={1672}
-            height={941}
-            sizes="100vw"
-            priority
-          />
-          <figcaption>
-            <span>PLATE 001 / M81 + M82</span>
-            <p>Resolved stellar populations turn faint galactic structure into countable, testable evidence.</p>
-            <a href="https://archive.chaipat.cc">Explore the complete figure archive <span aria-hidden="true">↗</span></a>
-          </figcaption>
-        </figure>
+        <section className="kiwis-visual-index" aria-labelledby="visual-index-title">
+          <div className="kiwis-visual-index-heading">
+            <div>
+              <span>PLATE REGISTER / 001–006</span>
+              <h2 id="visual-index-title">Read the evidence visually.</h2>
+            </div>
+            <p>
+              Six complete frames sample the path from field geometry to validation.
+              Axes, legends, and comparison panels remain intact.
+            </p>
+            <a href="https://archive.chaipat.cc">Browse all 257 figures <span aria-hidden="true">↗</span></a>
+          </div>
+          <div className="kiwis-visual-grid">
+            {visualIndex.map((figure, index) => (
+              <a
+                className={`${figure.featured ? "is-featured" : ""}${figure.wide ? " is-wide" : ""}`}
+                href={`https://archive.chaipat.cc/figures/${figure.id.toLowerCase().startsWith("m81") ? "m81" : "m82"}/${figure.id.toLowerCase()}.webp`}
+                key={figure.id}
+              >
+                <Image
+                  src={figure.src}
+                  alt={figure.alt}
+                  width={figure.width}
+                  height={figure.height}
+                  sizes={figure.featured || figure.wide ? "100vw" : "(max-width: 760px) 100vw, 50vw"}
+                  priority={index === 0}
+                />
+                <span>
+                  <small>{figure.id} · {figure.stage}</small>
+                  <strong>{figure.title}</strong>
+                  <i aria-hidden="true">↗</i>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
 
         <dl className="kiwis-cover-metrics">
           <div><dt>Research domains</dt><dd>03</dd></div>

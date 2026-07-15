@@ -11,6 +11,8 @@ type ResearchFigureProps = {
   width?: number;
   height?: number;
   contain?: boolean;
+  compact?: boolean;
+  priority?: boolean;
 };
 
 export function ResearchFigure({
@@ -24,9 +26,11 @@ export function ResearchFigure({
   width = 1800,
   height = 1100,
   contain = false,
+  compact = false,
+  priority = false,
 }: ResearchFigureProps) {
   return (
-    <figure className="kiwis-research-figure">
+    <figure className={`kiwis-research-figure${compact ? " kiwi-compact" : ""}`}>
       <div className={`kiwis-figure-image${contain ? " kiwi-contain" : ""}`}>
         <Image
           src={src}
@@ -34,6 +38,7 @@ export function ResearchFigure({
           width={width}
           height={height}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 70vw, 900px"
+          priority={priority}
         />
       </div>
       <figcaption>
