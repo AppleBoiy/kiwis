@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer, Layout, Navbar } from "nextra-theme-docs";
-import { Head } from "nextra/components";
+import { Head, Search } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import "./globals.css";
@@ -62,6 +62,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/AppleBoiy/kiwis/tree/main"
           footer={footer}
+          editLink={null}
+          feedback={{ content: null, labels: "feedback" }}
+          search={<Search placeholder="Search the research ledger…" />}
+          toc={{ title: "In this ledger", backToTop: "Return to top", float: true }}
         >
           {children}
         </Layout>
