@@ -39,22 +39,40 @@ const methodSteps = [
 
 const network = [
   {
-    code: "ARC / 01",
-    title: "Figure evidence",
-    description: "Complete M81/M82 figures with analysis-stage context.",
+    code: "IDX / 01",
+    title: "Academic archive",
+    description: "Identity, publications, technical projects, and the authoritative ecosystem index.",
+    href: "https://chaipat.cc",
+  },
+  {
+    code: "ARC / 02",
+    title: "Research archive",
+    description: "Research records, figures, interactive models, tables, and preserved source data.",
     href: "https://archive.chaipat.cc",
   },
   {
-    code: "GPH / 02",
-    title: "Knowledge relations",
-    description: "Relationships among projects, papers, methods, and dependencies.",
+    code: "GPH / 03",
+    title: "Graph laboratory",
+    description: "Interactive exploration of relationships among research, projects, and dependencies.",
     href: "https://graph.chaipat.cc",
   },
   {
-    code: "IDX / 03",
-    title: "Research identity",
-    description: "The central index for projects, publications, and academic work.",
-    href: "https://chaipat.cc",
+    code: "INF / 04",
+    title: "Infrastructure control",
+    description: "Network signal registry, API reachability, and infrastructure telemetry.",
+    href: "https://infra.chaipat.cc",
+  },
+  {
+    code: "SKY / 05",
+    title: "Project Sky",
+    description: "Astronomical FITS ingestion, stellar rasterization, and celestial-data viewing.",
+    href: "https://sky.chaipat.cc",
+  },
+  {
+    code: "WPY / 06",
+    title: "WordPlay",
+    description: "A browser-based collection of word puzzles, solvers, and search algorithms.",
+    href: "https://wp.chaipat.cc",
   },
 ];
 
@@ -105,7 +123,7 @@ export function ResearchHome() {
               datasets, and the evidence they produce across the chaipat.cc network.
             </p>
             <nav className="kiwis-cover-actions" aria-label="Primary workspace links">
-              <Link href="/notes">Open field notes <span aria-hidden="true">→</span></Link>
+              <Link href="/projects">Open project register <span aria-hidden="true">→</span></Link>
               <a href="https://archive.chaipat.cc">Inspect figure evidence <span aria-hidden="true">↗</span></a>
             </nav>
           </div>
@@ -121,7 +139,7 @@ export function ResearchHome() {
               Two complementary M81 frames anchor the notebook: one isolates residual
               structure, while the other validates the smooth stellar disk.
             </p>
-            <a href="https://archive.chaipat.cc">Browse all 257 figures <span aria-hidden="true">↗</span></a>
+            <a href="https://archive.chaipat.cc">Browse research records <span aria-hidden="true">↗</span></a>
           </div>
           <div className="kiwis-visual-grid">
             {visualIndex.map((figure, index) => (
@@ -150,7 +168,7 @@ export function ResearchHome() {
         <dl className="kiwis-cover-metrics">
           <div><dt>Research domains</dt><dd>03</dd></div>
           <div><dt>Documented stages</dt><dd>06</dd></div>
-          <div><dt>Connected nodes</dt><dd>03</dd></div>
+          <div><dt>Registered nodes</dt><dd>07</dd></div>
           <div><dt>Primary ledger</dt><dd>M81 / M82</dd></div>
         </dl>
       </header>
@@ -212,11 +230,14 @@ export function ResearchHome() {
       <section className="kiwis-index-section" aria-labelledby="network-title">
         <div className="kiwis-section-label">
           <span>REGISTER 02</span>
-          <span>CONNECTED RECORDS</span>
+          <span>REGISTERED NODES</span>
         </div>
         <div className="kiwis-section-intro">
-          <h2 id="network-title">Research network</h2>
-          <p>Move from explanation to evidence, relationships, and the wider project index.</p>
+          <h2 id="network-title">Project network</h2>
+          <p>
+            Six connected services surround KiWiS as the seventh registered node.
+            The <Link href="/projects">project register</Link> records their current roles and the research tracks they support.
+          </p>
         </div>
         <div className="kiwis-network-register">
           {network.map((node) => (

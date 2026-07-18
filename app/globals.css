@@ -274,6 +274,112 @@ article:not(:has(.kiwis-home)) main a {
   line-height: 1.6 !important;
 }
 
+.kiwis-project-summary {
+  display: grid;
+  margin: 2.5rem 0 4rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--kiwi-ink);
+  border-left: 1px solid var(--kiwi-ink);
+}
+
+.kiwis-project-summary > div {
+  min-height: 7.5rem;
+  padding: 1rem;
+  border-right: 1px solid var(--kiwi-ink);
+  border-bottom: 1px solid var(--kiwi-ink);
+}
+
+.kiwis-project-summary dt,
+.kiwis-project-card > span,
+.kiwis-project-ledger article > span {
+  color: var(--kiwi-ink-soft);
+  font-family: var(--kiwi-mono);
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.kiwis-project-summary dd {
+  margin: 1.5rem 0 0;
+  color: var(--kiwi-ink);
+  font-family: var(--kiwi-mono);
+  font-size: 1rem;
+  font-weight: 850;
+}
+
+.kiwis-project-register {
+  display: grid;
+  margin: 2rem 0 4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--kiwi-ink);
+  border-left: 1px solid var(--kiwi-ink);
+}
+
+.kiwis-project-card {
+  display: grid;
+  min-height: 17rem;
+  padding: 1.25rem;
+  grid-template-rows: auto 1fr auto auto;
+  border-right: 1px solid var(--kiwi-ink);
+  border-bottom: 1px solid var(--kiwi-ink);
+  color: var(--kiwi-ink) !important;
+  text-decoration: none !important;
+  transition: background 160ms ease;
+}
+
+.kiwis-project-card:hover {
+  background: color-mix(in srgb, var(--kiwi-accent) 12%, transparent);
+}
+
+.kiwis-project-card h3,
+.kiwis-project-ledger h3 {
+  margin: 3rem 0 0 !important;
+  font-size: 1.15rem !important;
+}
+
+.kiwis-project-card p,
+.kiwis-project-ledger p {
+  margin: 0.75rem 0 0 !important;
+  color: var(--kiwi-ink-soft) !important;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.kiwis-project-card strong {
+  margin-top: 2rem;
+  color: var(--kiwi-accent-deep);
+  font-family: var(--kiwi-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
+}
+
+.kiwis-project-ledger {
+  display: grid;
+  margin: 2rem 0 4rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--kiwi-ink);
+  border-left: 1px solid var(--kiwi-ink);
+}
+
+.kiwis-project-ledger article {
+  display: flex;
+  min-height: 19rem;
+  padding: 1.25rem;
+  flex-direction: column;
+  border-right: 1px solid var(--kiwi-ink);
+  border-bottom: 1px solid var(--kiwi-ink);
+}
+
+.kiwis-project-ledger article > a {
+  margin-top: auto;
+  padding-top: 2rem;
+  font-family: var(--kiwi-mono);
+  font-size: 0.56rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .nextra-steps {
   margin-inline-start: 1rem !important;
   padding-inline-start: 1.5rem !important;
@@ -1007,6 +1113,11 @@ body:has(.kiwis-home) .nextra-breadcrumb {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .kiwis-project-summary,
+  .kiwis-project-ledger {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .kiwis-visual-index-heading,
   .kiwis-ledger-note,
   .kiwis-research-figure figcaption {
@@ -1059,7 +1170,10 @@ body:has(.kiwis-home) .nextra-breadcrumb {
   .kiwis-cover-actions,
   .kiwis-cover-metrics,
   .kiwis-archive-note,
-  .kiwis-ledger-meta {
+  .kiwis-ledger-meta,
+  .kiwis-project-summary,
+  .kiwis-project-register,
+  .kiwis-project-ledger {
     grid-template-columns: 1fr;
   }
 
