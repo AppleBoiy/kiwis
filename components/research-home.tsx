@@ -37,45 +37,6 @@ const methodSteps = [
   "Validation",
 ];
 
-const network = [
-  {
-    code: "IDX / 01",
-    title: "Academic archive",
-    description: "Identity, publications, technical projects, and the authoritative ecosystem index.",
-    href: "https://chaipat.cc",
-  },
-  {
-    code: "ARC / 02",
-    title: "Research archive",
-    description: "Research records, figures, interactive models, tables, and preserved source data.",
-    href: "https://archive.chaipat.cc",
-  },
-  {
-    code: "GPH / 03",
-    title: "Graph laboratory",
-    description: "Interactive exploration of relationships among research, projects, and dependencies.",
-    href: "https://graph.chaipat.cc",
-  },
-  {
-    code: "INF / 04",
-    title: "Infrastructure control",
-    description: "Network signal registry, API reachability, and infrastructure telemetry.",
-    href: "https://infra.chaipat.cc",
-  },
-  {
-    code: "SKY / 05",
-    title: "Project Sky",
-    description: "Astronomical FITS ingestion, stellar rasterization, and celestial-data viewing.",
-    href: "https://sky.chaipat.cc",
-  },
-  {
-    code: "WPY / 06",
-    title: "WordPlay",
-    description: "A browser-based collection of word puzzles, solvers, and search algorithms.",
-    href: "https://wp.chaipat.cc",
-  },
-];
-
 const visualIndex = [
   {
     id: "M81-099",
@@ -123,7 +84,7 @@ export function ResearchHome() {
               datasets, and the evidence they produce across the chaipat.cc network.
             </p>
             <nav className="kiwis-cover-actions" aria-label="Primary workspace links">
-              <Link href="/projects">Open project register <span aria-hidden="true">→</span></Link>
+              <Link href="/methods/m81-m82">Read the method ledger <span aria-hidden="true">→</span></Link>
               <a href="https://archive.chaipat.cc">Inspect figure evidence <span aria-hidden="true">↗</span></a>
             </nav>
           </div>
@@ -168,7 +129,7 @@ export function ResearchHome() {
         <dl className="kiwis-cover-metrics">
           <div><dt>Research domains</dt><dd>03</dd></div>
           <div><dt>Documented stages</dt><dd>06</dd></div>
-          <div><dt>Registered nodes</dt><dd>07</dd></div>
+          <div><dt>Core practice</dt><dd>TRACE</dd></div>
           <div><dt>Primary ledger</dt><dd>M81 / M82</dd></div>
         </dl>
       </header>
@@ -224,30 +185,6 @@ export function ResearchHome() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section className="kiwis-index-section" aria-labelledby="network-title">
-        <div className="kiwis-section-label">
-          <span>REGISTER 02</span>
-          <span>REGISTERED NODES</span>
-        </div>
-        <div className="kiwis-section-intro">
-          <h2 id="network-title">Project network</h2>
-          <p>
-            Six connected services surround KiWiS as the seventh registered node.
-            The <Link href="/projects">project register</Link> records their current roles and the research tracks they support.
-          </p>
-        </div>
-        <div className="kiwis-network-register">
-          {network.map((node) => (
-            <a href={node.href} key={node.code}>
-              <span>{node.code}</span>
-              <h3>{node.title}</h3>
-              <p>{node.description}</p>
-              <b aria-hidden="true">↗</b>
-            </a>
-          ))}
         </div>
       </section>
 
